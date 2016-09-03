@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.shaunmesias.assignment_6_2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".conf.util.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="com.example.shaunmesias.assignment_6_2.MainActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".services.driver.impl.FindDriverServiceImpl" />
+        <service android:name=".services.driver.impl.FindAllDriversServiceImpl" />
+        <service android:name=".services.driver.impl.UpdateDriverServiceImpl" />
+        <service android:name=".services.driver.impl.DeleteDriverServiceImpl" />
+        <service android:name=".services.driver.impl.AddDriverServiceImpl" />
+        <service android:name=".services.person.impl.FindPersonServiceImpl" />
+        <service android:name=".services.person.impl.FindAllPersonServiceImpl" />
+        <service android:name=".services.person.impl.AddPersonServiceImpl" />
+        <service android:name=".services.person.impl.UpdatePersonServiceImpl" />
+        <service android:name=".services.register.impl.AddRegisterServiceImpl" />
+        <service android:name=".services.register.impl.UpdateRegisterServiceImpl" />
+
+        <activity android:name=".AddDriverActivity" />
+        <activity android:name=".DetailsActivity" />
+        <activity android:name=".ViewAllActivity" />
+        <activity android:name=".UpdateDriverActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
